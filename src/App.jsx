@@ -7,14 +7,19 @@ import {
   useNavigate
 }from "react-router-dom";
 import "./App.css"
-import About from "./Despre.jsx"
+import Despre from "./Despre.jsx"
+import Oferte from "./Oferte.jsx"
+import Elevi from "./Elevi.jsx"
+import Parinti from "./Parinti.jsx"
+import Documente from "./Documente.jsx"
+import Galerie from "./Galerie.jsx"
+import Footer from "./parts.jsx"
 
 const Home=() =>{
   const navigate = useNavigate();
   return (    
     <div>
         <header>
-          <button onClick={()=>navigate('/despre')}>despre</button>
         </header>
         
         <main className="main-body">
@@ -77,21 +82,30 @@ const Home=() =>{
 function App(){
   return(
     <Router>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Acasa</Link>
-          </li>
-          <li>
-            <Link to="/despre">despre</Link>
-          </li>
-        </ul>
+      <nav className='navigare'>
+        
+            <Link className='link' to="/">Acasa</Link>
+            <Link className='link' to="/despre">Despre</Link>
+            <Link className='link' to="/oferte">Oferte Educationale</Link>
+            <Link className='link' to="/elevi">Elevi</Link>
+            <Link className='link' to="/parinti">Parinti</Link>
+            <Link className='link' to="/documente">Documente</Link>
+            <Link className='link' to="/galerie">Galerie</Link>
+          
       </nav>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/despre' element={<About/>}/>
+        <Route path='/despre' element={<Despre/>}/>
+        <Route path='/oferte' element={<Oferte/>}/>
+        <Route path='/elevi' element={<Elevi/>}/>
+        <Route path='/parinti' element={<Parinti/>}/>
+        <Route path='/documente' element={<Documente/>}/>
+        <Route path='/galerie' element={<Galerie/>}/>
+        
       </Routes>
+      <Footer/>
     </Router>
+    
   );
 };
 

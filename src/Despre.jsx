@@ -1,7 +1,7 @@
-import "./Despre.css"
+import "./parts.css"
 
-const About=() =>(
+const Despre=() =>(
   <div>despre Scoala Oniceni</div>
 );
 
-export default About;
+export default Despre

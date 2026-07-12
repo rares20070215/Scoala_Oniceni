@@ -1,4 +1,7 @@
-
+*{
+  padding:0;
+  margin:0;
+}
 .nav_title{
     text-align: center;
     align-self: center;
@@ -7,8 +10,9 @@
     color: rgb(75, 90, 53);
 }
 
-nav{
+.navigare{
     text-align:center;
+    flex-direction:row;
     background-color: rgb(154, 177, 122);
     display: flex;
     justify-content:space-around;
@@ -17,7 +21,7 @@ nav{
     padding-left:5%;
     padding-right:5%;
     width: max-width;
-    height: 20%;
+    height: 50px;
     border-radius:0px 0px 5px 5px;
 }
 footer{
@@ -31,4 +35,23 @@ footer{
 .body{
     padding-left: 5%;
     padding-right:5%;
+}
+
+.link{
+  text-decoration:none;
+  display:flex;
+  height:80%;
+  position:relative;
+}
+.link:link{
+  color: rgb(75, 90, 53);
+}
+.link:visited{
+  color: rgb(75, 90, 53);
+}
+.link:hover{
+  color: rgb(75, 90, 53);
+}
+.link:active{
+  color: rgb(75, 90, 53);
 }
