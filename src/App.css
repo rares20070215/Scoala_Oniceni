@@ -40,8 +40,15 @@ footer{
 .link{
   text-decoration:none;
   display:flex;
-  height:80%;
+  height:90%;
+  text-align: center;
+  background-color:  rgb(121, 124, 116);
   position:relative;
+  border-radius: 5%;
+  width:12%;
+}
+.link:active{
+  background-color:  rgb(96, 112, 70);
 }
 .link:link{
   color: rgb(75, 90, 53);
