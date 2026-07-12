@@ -1,7 +1,7 @@
 import "./parts.css"
-
+import "./App.css"
 const Istoric=() =>(
-  <div>despre Scoala Oniceni</div>
+  <div className="content-wrapper">despre Scoala Oniceni</div>
 );
 const Structuri=() =>(
   <div>despre Scoala Oniceni</div>

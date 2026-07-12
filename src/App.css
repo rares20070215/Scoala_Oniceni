@@ -2,6 +2,9 @@
   padding:0;
   margin:0;
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 .nav_title{
     text-align: center;
     align-self: center;
@@ -10,25 +13,28 @@
     color: rgb(75, 90, 53);
 }
 
-.navigare{
-    text-align:center;
-    flex-direction:row;
-    background-color: rgb(154, 177, 122);
-    display: flex;
-    justify-content:space-around;
-    padding-top: 5px;
-    padding-bottom:5px;
-    padding-left:5%;
-    padding-right:5%;
-    width: max-width;
-    height: 50px;
-    border-radius:0px 0px 5px 5px;
+.navigare {
+  flex-wrap: wrap;
+  text-align: center;
+  flex-direction: row;
+  background-color: rgb(154, 177, 122);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  min-height: 50px;
+  height: auto;
+  border-radius: 0px 0px 5px 5px;
 }
 footer{
     background-color: rgb(195, 204, 155);
     padding-top: 1%;
     padding-bottom:1%;
     padding-left:5%;
+    flex-shrink:0;
     padding-right:5%;
 }
 
@@ -40,7 +46,7 @@ footer{
 .link{
   text-decoration:none;
   display:flex;
-  height:90%;
+  height:10%;
   text-align: center;
   position:relative;
   border-radius: 5%;
@@ -48,16 +54,65 @@ footer{
 }
 .link:active{
   background-color:  rgb(96, 112, 70);
+  text-decoration: none;
 }
 .link:link{
   color: rgb(75, 90, 53);
+  text-decoration: none;
 }
 .link:visited{
   color: rgb(75, 90, 53);
+  text-decoration: none;
 }
 .link:hover{
   color: rgb(75, 90, 53);
+  text-decoration: none;
 }
 .link:active{
   color: rgb(75, 90, 53);
+  text-decoration: none;
+}
+html, main{
+  height:100%;
+  margin:0;
+}
+body{
+  display: flex;
+  flex-direction:column;
+}
+.content-wrapper{
+  flex: 1 0 auto;
+}
+
+.nav-btn,
+.nav-dropdown .rs-dropdown-toggle {
+  all: unset;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 500;
+  color:   rgb(75, 90, 53);
+  background: transparent;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.nav-btn:hover,
+.nav-dropdown .rs-dropdown-toggle:hover,
+.nav-dropdown .rs-dropdown-toggle:focus {
+  color:  rgb(75, 90, 53);
+  text-decoration: none;
+  background-color: rgb(154, 177, 122);
+  transition: background-color 0.2s ease;
+}
+.nav-dropdown .rs-dropdown-menu {
+  background-color:  rgb(154, 177, 122);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px  rgb(75, 90, 53);
+  padding: 8px;
+  min-width: 220px;
+  border: 1px solid  rgba(0, 0, 0, 0.2);;
 }

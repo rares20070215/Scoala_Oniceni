@@ -83,19 +83,45 @@ const Home=() =>{
 
 function App(){
   return(
-    <Router>
+    <Router claaName="content-wrapper">
       <nav className='navigare'>
-            <Link className='link' to="/">Acasa</Link>
-
-            <Dropdown title="Despre" noCaret className='link'>
-              <Dropdown.Item><Link className='link' to="/istoric">Istoric</Link></Dropdown.Item>
-              <Dropdown.Item><Link className='link' to="/structuri">Structuri</Link></Dropdown.Item>
-              <Dropdown.Item><Link className='link' to="/cadre">Cadre Didactice</Link></Dropdown.Item>
-              <Dropdown.Item><Link className='link' to="/CP">Consiliu Profesoral</Link></Dropdown.Item>
-              <Dropdown.Item><Link className='link' to="/CA">Consiliu Administratie</Link></Dropdown.Item>
-              <Dropdown.Item><Link className='link' to="/Materiala">Baza Materiala</Link></Dropdown.Item>
+            <Link className="nav-dropdown nav-btn" to="/">Acasa</Link>
+            <Dropdown title="Despre" noCaret className='nav-dropdown'>
+              <Dropdown.Item as={Link} to="/istoric">Istoric</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/structuri">Structuri</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/cadre">Cadre Didactice</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/CP">Consiliu Profesoral</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/CA">Consiliu Administratie</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/Materiala">Baza Materiala</Dropdown.Item>
             </Dropdown>
-
+            <Dropdown title="Oferta Educationala" noCaret className="nav-dropdown">
+              <Dropdown.Item as={Link} to="/clase">CP + Clase</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/curriculum">Curriculum</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/optionale">Programe Optionale</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/extracurriculare">Activitati Extracurriculare</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/proiecteparteneri">Proiecte si Parteneriate</Dropdown.Item>
+            </Dropdown>
+            <Dropdown title="Elevi" noCaret className="nav-dropdown">
+              <Dropdown.Item as={Link} to="/orar">Orar</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/regulament">Regulament</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/burse">Burse</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/transport">Transport Scolar</Dropdown.Item>
+            </Dropdown>
+            <Dropdown title="Parinti" noCaret className="nav-dropdown">
+              <Dropdown.Item as={Link} to="/inscrieri">Inscrieri</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/catalog">Catalog Electronic</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/documente">Documente</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/intrebari">Intrebari Frecvente</Dropdown.Item>
+            </Dropdown>
+            <Dropdown title="Documente" noCaret className="nav-dropdown">
+              <Dropdown.Item as={Link} to="/regulamente">Regulamente</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/pdi">PDI</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/plan">Plan Managerial</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/proceduri">Proceduri</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/formulare">Formulare</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/hotarari">Hotarari CA</Dropdown.Item>
+            </Dropdown>
+            <Link className='nav-dropdown nav-btn' to="/galerie">Galerie</Link>
           
       </nav>
       <Routes>
@@ -106,7 +132,26 @@ function App(){
         <Route path='/CP' element={<CP/>}/>
         <Route path='/CA' element={<CA/>}/>
         <Route path='/Materiala' element={<Materiala/>}/>
-        
+        <Route path='/clase' element={<Clase/>}/>
+        <Route path='/curriculum' element={<Curriculum/>}/>
+        <Route path='/extracurriculare' element={<Extracurriculare/>}/>
+        <Route path='/optionale' element={<Optionale/>}/>
+        <Route path='/proiecteparteneri' element={<ProecteParteneriate/>}/>
+        <Route path='/regulamente' element={<Regulamente/>}/>
+        <Route path='/orar' element={<Orar/>}/>
+        <Route path='/burse' element={<Burse/>}/>
+        <Route path='/transport' element={<Transport/>}/>
+        <Route path='/inscrieri' element={<Inscrieri/>}/>
+        <Route path='/catalog' element={<Catalog/>}/>
+        <Route path='/regulament' element={<Regulament/>}/>
+        <Route path='/intrebari' element={<Intrebari/>}/>
+        <Route path='/documente' element={<Documente/>}/>
+        <Route path='/pdi' element={<PDI/>}/>
+        <Route path='/plan' element={<Plan/>}/>
+        <Route path='/proceduri' element={<Proceduri/>}/>
+        <Route path='/hotarari' element={<Hotarari/>}/>
+        <Route path='/formulare' element={<Formulare/>}/>
+        <Route path='/galerie' element={<Galerie/>}/>
       </Routes>
       <Footer/>
     </Router>
