@@ -8,6 +8,7 @@ import {
 }
 from "react-router-dom";
 import "./App.css"
+import "./parts.jsx"
 import {Dropdown} from "rsuite"
    import 'rsuite/dist/rsuite.min.css';
 import { Istoric, Structuri, Cadre, CP, CA, Materiala } from "./Despre.jsx"
@@ -21,13 +22,13 @@ import Footer from "./parts.jsx"
 const Home=() =>{
   const navigate = useNavigate();
   return (    
-    <div>
+    <div className="corp">
         <header>
         </header>
         
         <main className="main-body">
             <div className = 'body'>
-                <h1>Prezentare</h1>
+                <h1 align='center'>Prezentare</h1>
                 <h3>Scoala Gimnaziala Oniceni are in componenta sa urmatoarele formatiuni de studiu:
                 <ul>
                     <li>GPN ”Costică Nitu” Oniceni</li>
@@ -83,7 +84,8 @@ const Home=() =>{
 
 function App(){
   return(
-    <Router claaName="content-wrapper">
+    <Router>
+      <div className="content-wrapper">
       <nav className='navigare'>
             <Link className="nav-dropdown nav-btn" to="/">Acasa</Link>
             <Dropdown title="Despre" noCaret className='nav-dropdown'>
@@ -154,6 +156,7 @@ function App(){
         <Route path='/galerie' element={<Galerie/>}/>
       </Routes>
       <Footer/>
+      </div>
     </Router>
     
   );
