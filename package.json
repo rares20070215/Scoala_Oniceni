@@ -1,6 +1,6 @@
 {
-  "name": "scoala-oniceni",
-  "private": true,
+  "name": "Scoala_Oniceni_react",
+  "private": false,
   "homepage":"https://rares20070215.github.io/Scoala_Oniceni_react",
   "version": "0.0.0",
   "type": "module",
