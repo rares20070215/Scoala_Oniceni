@@ -7,13 +7,14 @@ import {
   useNavigate
 }from "react-router-dom";
 import "./App.css"
+import About from "./Despre.jsx"
 
 const Home=() =>{
   const navigate = useNavigate();
   return (    
     <div>
         <header>
-          <button onClick={()=>navigate('/despre')}>Acasa</button>
+          <button onClick={()=>navigate('/despre')}>despre</button>
         </header>
         
         <main className="main-body">
@@ -72,9 +73,6 @@ const Home=() =>{
   );
 };
 
-const About=() =>(
-  <div>despre Scoala Oniceni</div>
-);
 
 function App(){
   return(
