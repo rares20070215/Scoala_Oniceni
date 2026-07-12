@@ -1,7 +1,16 @@
 import "./parts.css"
 
-const Parinti=() =>(
+const Inscrieri=() =>(
+  <div>Parinti</div>
+);
+const Catalog=() =>(
+  <div>Parinti</div>
+);
+const Documente=() =>(
+  <div>Parinti</div>
+);
+const Intrebari=() =>(
   <div>Parinti</div>
 );
 
-export default Parinti
+export {Inscrieri, Catalog, Documente, Intrebari};

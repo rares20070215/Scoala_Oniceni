@@ -5,13 +5,16 @@ import {
   Route,
   Link,
   useNavigate
-}from "react-router-dom";
+}
+from "react-router-dom";
 import "./App.css"
-import Despre from "./Despre.jsx"
-import Oferte from "./Oferte.jsx"
-import Elevi from "./Elevi.jsx"
-import Parinti from "./Parinti.jsx"
-import Documente from "./Documente.jsx"
+import {Dropdown} from "rsuite"
+   import 'rsuite/dist/rsuite.min.css';
+import { Istoric, Structuri, Cadre, CP, CA, Materiala } from "./Despre.jsx"
+import {Clase, Curriculum, Optionale, Extracurriculare, ProecteParteneriate} from "./Oferte.jsx"
+import {Orar, Regulament, Burse, Transport} from "./Elevi.jsx"
+import {Inscrieri, Catalog, Documente, Intrebari} from "./Parinti.jsx"
+import {Regulamente, PDI, Plan, Proceduri, Hotarari, Formulare} from "./Documente.jsx"
 import Galerie from "./Galerie.jsx"
 import Footer from "./parts.jsx"
 
@@ -78,29 +81,31 @@ const Home=() =>{
   );
 };
 
-
 function App(){
   return(
     <Router>
       <nav className='navigare'>
-        
             <Link className='link' to="/">Acasa</Link>
-            <Link className='link' to="/despre">Despre</Link>
-            <Link className='link' to="/oferte">Oferte Educationale</Link>
-            <Link className='link' to="/elevi">Elevi</Link>
-            <Link className='link' to="/parinti">Parinti</Link>
-            <Link className='link' to="/documente">Documente</Link>
-            <Link className='link' to="/galerie">Galerie</Link>
+
+            <Dropdown title="Despre" noCaret className='link'>
+              <Dropdown.Item><Link className='link' to="/istoric">Istoric</Link></Dropdown.Item>
+              <Dropdown.Item><Link className='link' to="/structuri">Structuri</Link></Dropdown.Item>
+              <Dropdown.Item><Link className='link' to="/cadre">Cadre Didactice</Link></Dropdown.Item>
+              <Dropdown.Item><Link className='link' to="/CP">Consiliu Profesoral</Link></Dropdown.Item>
+              <Dropdown.Item><Link className='link' to="/CA">Consiliu Administratie</Link></Dropdown.Item>
+              <Dropdown.Item><Link className='link' to="/Materiala">Baza Materiala</Link></Dropdown.Item>
+            </Dropdown>
+
           
       </nav>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/despre' element={<Despre/>}/>
-        <Route path='/oferte' element={<Oferte/>}/>
-        <Route path='/elevi' element={<Elevi/>}/>
-        <Route path='/parinti' element={<Parinti/>}/>
-        <Route path='/documente' element={<Documente/>}/>
-        <Route path='/galerie' element={<Galerie/>}/>
+        <Route path='/istoric' element={<Istoric/>}/>
+        <Route path='/structuri' element={<Structuri/>}/>
+        <Route path='/cadre' element={<Cadre/>}/>
+        <Route path='/CP' element={<CP/>}/>
+        <Route path='/CA' element={<CA/>}/>
+        <Route path='/Materiala' element={<Materiala/>}/>
         
       </Routes>
       <Footer/>

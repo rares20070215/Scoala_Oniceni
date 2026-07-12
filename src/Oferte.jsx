@@ -1,7 +1,20 @@
 import "./parts.css"
 
-const Oferte=() =>(
+const Clase=() =>(
+  <div>Oferte</div>
+);
+const Curriculum=() =>(
+  <div>Oferte</div>
+);
+const Optionale=() =>(
+  <div>Oferte</div>
+);
+const Extracurriculare=() =>(
+  <div>Oferte</div>
+);
+const ProecteParteneriate=() =>(
   <div>Oferte</div>
 );
 
-export default Oferte
+
+export  {Clase, Curriculum, Optionale, Extracurriculare, ProecteParteneriate};

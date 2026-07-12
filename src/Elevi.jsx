@@ -1,7 +1,19 @@
 import "./parts.css"
 
-const Elevi=() =>(
+const Orar=() =>(
   <div>Elevi</div>
 );
 
-export default Elevi
+const Regulament=() =>(
+  <div>Elevi</div>
+);
+
+const Burse=() =>(
+  <div>Elevi</div>
+);
+
+const Transport=() =>(
+  <div>Elevi</div>
+);
+
+export {Orar, Regulament, Burse, Transport};
