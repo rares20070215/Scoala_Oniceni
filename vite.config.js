@@ -4,7 +4,7 @@ import babel from '@rolldown/plugin-babel'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/scoala-oniceni/',
+  base: '/Scoala_Oniceni_react/',
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
