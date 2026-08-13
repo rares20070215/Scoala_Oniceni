@@ -1,6 +1,8 @@
 *{
+  -webkit-tap-highlight-color: transparent;
   padding:0;
   margin:0;
+  box-sizing:inherit;
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -10,14 +12,19 @@
     align-self: center;
     font-size: 200%;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(75, 90, 53);
+    color:rgb(25, 133, 161);
 }
 
+hr{
+  width:100%;
+  size:6px;
+  align-self:center;
+}
 .navigare {
   flex-wrap: wrap;
   text-align: center;
   flex-direction: row;
-  background-color: rgb(154, 177, 122);
+  background-color: rgb(25, 133, 161);
   display: flex;
   justify-content: space-around;
   padding-top: 5px;
@@ -30,7 +37,7 @@
   border-radius: 0px 0px 5px 5px;
 }
 footer{
-    background-color: rgb(195, 204, 155);
+    background-color: #1985A1;
     padding-top: 1%;
     padding-bottom:1%;
     padding-left:5%;
@@ -44,33 +51,35 @@ footer{
 }
 
 .link{
-  text-decoration:none;
   display:flex;
   height:10%;
   text-align: center;
+  font-weight:bold;
   position:relative;
+  color: rgb(70, 73, 76);
   border-radius: 5%;
   width:12%;
 }
-.link:active{
-  background-color:  rgb(96, 112, 70);
-  text-decoration: none;
-}
+
 .link:link{
-  color: rgb(75, 90, 53);
+  color:  rgb(70, 73, 76);
   text-decoration: none;
 }
 .link:visited{
-  color: rgb(75, 90, 53);
+  color:  rgb(70, 73, 76);
   text-decoration: none;
 }
 .link:hover{
-  color: rgb(75, 90, 53);
+  color: rgb(70, 73, 76);
   text-decoration: none;
 }
 .link:active{
-  color: rgb(75, 90, 53);
+  background-color:   rgb(70, 73, 76);
+  color: rgb(70, 73, 76);
   text-decoration: none;
+}
+.link:focus{
+  color: rgb(70, 73, 76);
 }
 html, main{
   height:100%;
@@ -90,6 +99,7 @@ body{
 .nav-btn,
 .nav-dropdown .rs-dropdown-toggle {
   all: unset;
+  font-weight:500;
   cursor: pointer;
   box-sizing: border-box;
   display: inline-block;
@@ -97,7 +107,7 @@ body{
   font-size: 16px;
   font-family: inherit;
   font-weight: 500;
-  color:   rgb(75, 90, 53);
+  color:   rgb(70, 73, 76);
   background: transparent;
   border-radius: 4px;
   text-decoration: none;
@@ -106,16 +116,52 @@ body{
 .nav-btn:hover,
 .nav-dropdown .rs-dropdown-toggle:hover,
 .nav-dropdown .rs-dropdown-toggle:focus {
-  color:  rgb(75, 90, 53);
+  color:  rgb(70, 73, 76);
   text-decoration: none;
-  background-color: rgb(154, 177, 122);
-  transition: background-color 0.2s ease;
+  animation:none;
+  background-color:rgb(220, 220, 221);
 }
 .nav-dropdown .rs-dropdown-menu {
-  background-color:  rgb(154, 177, 122);
+  background-color:  rgb(25, 133, 161);
   border-radius: 10px;
-  box-shadow: 0 8px 20px  rgb(75, 90, 53);
+  box-shadow: 0 8px 20px  rgb(76, 92, 104);
   padding: 8px;
   min-width: 220px;
   border: 1px solid  rgba(0, 0, 0, 0.2);;
 }
+
+/* Disable ripple visuals coming from rsuite for the navbar dropdown toggles */
+.nav-dropdown .rs-dropdown-toggle::after,
+.nav-dropdown .rs-dropdown-toggle::before,
+.nav-dropdown .rs-dropdown-toggle .rs-ripple,
+.nav-dropdown .rs-dropdown-toggle .rs-ripple-element,
+.rs-ripple,
+.rs-ripple-element,
+.rs-btn .rs-ripple,
+.rs-btn .rs-ripple-element,
+.nav-dropdown .rs-dropdown-toggle *,
+.nav-dropdown .rs-dropdown-toggle *::after,
+.nav-dropdown .rs-dropdown-toggle *::before {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Also prevent any overflow/clip or animated effects that could show ripple */
+.nav-dropdown .rs-dropdown-toggle,
+.nav-dropdown .rs-dropdown-toggle * {
+  overflow: visible !important;
+  -webkit-tap-highlight-color: transparent !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+/* More aggressive: neutralize pseudo-elements and transitions on toggle */
+.nav-dropdown .rs-dropdown-toggle::after,
+.nav-dropdown .rs-dropdown-toggle::before {
+  content: none !important;
+}
+

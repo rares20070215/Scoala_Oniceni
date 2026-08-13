@@ -77,7 +77,6 @@ const Home=() =>{
                 sang their blank melody outside.</h4>
             </div>
         </main>
-    <div id = "footer"></div>   
     </div>
   );
 };
@@ -87,7 +86,7 @@ function App(){
     <Router>
       <div className="content-wrapper">
       <nav className='navigare'>
-            <Link className="nav-dropdown nav-btn" to="/">Acasa</Link>
+            <a className="nav-dropdown nav-btn" to="/">Scoala Oniceni</a>
             <Dropdown title="Despre" noCaret className='nav-dropdown'>
               <Dropdown.Item as={Link} to="/istoric">Istoric</Dropdown.Item>
               <Dropdown.Item as={Link} to="/structuri">Structuri</Dropdown.Item>
@@ -123,7 +122,7 @@ function App(){
               <Dropdown.Item as={Link} to="/formulare">Formulare</Dropdown.Item>
               <Dropdown.Item as={Link} to="/hotarari">Hotarari CA</Dropdown.Item>
             </Dropdown>
-            <Link className='nav-dropdown nav-btn' to="/galerie">Galerie</Link>
+            <a className='nav-dropdown nav-btn' to="/galerie">Galerie</a>
           
       </nav>
       <Routes>
@@ -155,6 +154,8 @@ function App(){
         <Route path='/formulare' element={<Formulare/>}/>
         <Route path='/galerie' element={<Galerie/>}/>
       </Routes>
+
+    <hr /> 
       <Footer/>
       </div>
     </Router>
