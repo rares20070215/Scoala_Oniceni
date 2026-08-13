@@ -107,16 +107,32 @@ body{
   font-size: 16px;
   font-family: inherit;
   font-weight: 500;
-  color:   rgb(70, 73, 76);
+  color: rgb(70, 73, 76);
   background: transparent;
   border-radius: 4px;
   text-decoration: none;
 }
 
+.nav-btn:link,
+.nav-btn:visited,
+.nav-btn:active,
+.nav-btn:focus,
+.nav-dropdown .rs-dropdown-toggle:link,
+.nav-dropdown .rs-dropdown-toggle:visited,
+.nav-dropdown .rs-dropdown-toggle:active,
+.nav-dropdown .rs-dropdown-toggle:focus,
+.nav-dropdown .rs-dropdown-item a:link,
+.nav-dropdown .rs-dropdown-item a:visited,
+.nav-dropdown .rs-dropdown-item a:active,
+.nav-dropdown .rs-dropdown-item a:focus {
+  color: rgb(70, 73, 76) !important;
+  text-decoration: none !important;
+}
+
 .nav-btn:hover,
 .nav-dropdown .rs-dropdown-toggle:hover,
 .nav-dropdown .rs-dropdown-toggle:focus {
-  color:  rgb(70, 73, 76);
+  color: rgb(70, 73, 76);
   text-decoration: none;
   animation:none;
   background-color:rgb(220, 220, 221);

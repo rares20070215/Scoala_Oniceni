@@ -86,7 +86,7 @@ function App(){
     <Router>
       <div className="content-wrapper">
       <nav className='navigare'>
-            <a className="nav-dropdown nav-btn" to="/">Scoala Oniceni</a>
+            <Link className="nav-dropdown nav-btn" to="/">Scoala Oniceni</Link>
             <Dropdown title="Despre" noCaret className='nav-dropdown'>
               <Dropdown.Item as={Link} to="/istoric">Istoric</Dropdown.Item>
               <Dropdown.Item as={Link} to="/structuri">Structuri</Dropdown.Item>
@@ -122,8 +122,7 @@ function App(){
               <Dropdown.Item as={Link} to="/formulare">Formulare</Dropdown.Item>
               <Dropdown.Item as={Link} to="/hotarari">Hotarari CA</Dropdown.Item>
             </Dropdown>
-            <a className='nav-dropdown nav-btn' to="/galerie">Galerie</a>
-          
+            <Link className="nav-dropdown nav-btn" to="/galerie">Galerie</Link>
       </nav>
       <Routes>
         <Route path='/' element={<Home/>}/>
